@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap');
+
+/*******************************************************Defaults*/
+:root {
+    --medium-spring-green: #38ffaaff;
+    --pine-green: #1d7a6dff;
+    --midnight-green-eagle-green: #124655ff;
+    --oxford-blue: #07113dff;
+    --sky-blue-crayola: #54defdff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Playfair Display', serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 { font-family: 'Lato', sans-serif;}
+
+header {
+    height: 85px;
+    width: 100%;
+    background-color: var(--oxford-blue);
+}
+main {
+    width: 100%;
+    background-color: aqua;
+}
+
+footer {
+    height: 150px;
+    width: 100%;
+    border-top: 3px solid var(--medium-spring-green);
+    background-color: var(--oxford-blue);
+    position: absolute;
+    bottom: 0;
+}
