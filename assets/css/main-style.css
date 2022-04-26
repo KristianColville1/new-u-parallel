@@ -21,18 +21,93 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3 { font-family: 'Lato', sans-serif;}
+header, h1, h2, h3 { font-family: 'Lato', sans-serif;}
+
+/*********************************************************Header*/
+
+.page-container {
+    min-height: 100vh;
+}
 
 header {
-    height: 85px;
     width: 100%;
-    background-color: var(--oxford-blue);
-}
-main {
-    width: 100%;
-    background-color: aqua;
+    height: 80px;
+    box-shadow: 1px 1px 4px var(--oxford-blue);
+    position: fixed;
 }
 
+.logo-container {
+    width: 350px;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+}
+
+#logo {
+    width: 250px;
+    height: 60px;
+    background: url('../images/logo-transparent.png') no-repeat center center;
+    background-size: contain;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#slogan {
+    color: var(--oxford-blue);
+    font-weight: 500;
+    font-size: .8rem;
+    text-shadow: 1px 1px 1px var(--sky-blue-crayola);
+    margin-left: 5px;
+}
+
+nav {
+    width: 50%;
+    height: 81px;
+    float: right;
+    background-color: var(--oxford-blue);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.menu {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu li {
+    width: 125px;
+    display: inline;
+}
+
+.menu a,
+.serv-drop-down {
+    color: var(--medium-spring-green);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu a:hover {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+/***********************************************************Body*/
+
+main {
+    width: 100%;
+    height: 300px;
+}
+
+/************************************************************Footer*/
 footer {
     height: 150px;
     width: 100%;
@@ -40,4 +115,39 @@ footer {
     background-color: var(--oxford-blue);
     position: absolute;
     bottom: 0;
+}
+
+/**************************************************************Media Queries */
+
+@media screen and (max-width: 768px) {
+    header {
+        height: 120px;
+    }
+
+    .logo-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #slogan {
+        font-size: .7rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav {
+        height: 280px;
+        transform: translateY(120px);
+        box-shadow: 1px 1px 4px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menu li {
+        margin-top: 30px;
+        margin-left: 20px;
+        display: block;
+    }
 }
