@@ -37,6 +37,7 @@ header {
 }
 
 .logo-container {
+    height: 80px;
     width: 350px;
     position: absolute;
     display: flex;
@@ -56,17 +57,18 @@ header {
 
 #slogan {
     color: var(--oxford-blue);
-    font-weight: 500;
+    font-weight: 700;
     font-size: .8rem;
-    text-shadow: 1px 1px 1px var(--sky-blue-crayola);
     margin-left: 5px;
 }
 
 nav {
     width: 70%;
-    height: 81px;
+    height: 80px;
     float: right;
     background-color: var(--oxford-blue);
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -87,20 +89,26 @@ nav {
     display: inline;
 }
 
-.menu a {
+.menu a,
+.hidden-links {
     color: var(--medium-spring-green);
     text-decoration: none;
     cursor: pointer;
 }
 
-.menu a:hover {
+.menu a:hover,
+.hidden-links:hover {
     font-size: 1.3rem;
     font-weight: 700;
 }
 
+.hidden-links {
+    display: none !important;
+}
+
 .dropbtn {
     height: 80px;
-    width: 150px;
+    width: 130px;
     font-size: 1rem;
     background-color: var(--medium-spring-green);
     border-radius: none;
@@ -116,7 +124,7 @@ nav {
     display: none;
     position: absolute;
     background-color: var(--oxford-blue);
-    min-width: 160px;
+    min-width: 130px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 4;
 }
@@ -161,24 +169,47 @@ footer {
 
 /**************************************************************Media Queries */
 
-@media screen and (max-width: 768px) {
-    header {
-        height: 120px;
-    }
+@media screen and (max-width: 1150px) {
 
     .logo-container {
+        background-color: var(--oxford-blue);
+    }
+    #logo {
+        width: 200px;
+        height: 90px;
+        background-color: var(--oxford-blue);
+        background: url('../images/logo-reverse.jpg') no-repeat center center;
+        background-size: contain;
+        margin-top: -15px;
+        cursor: pointer;
+    }
+    
+    #slogan {
+        color: white;
+        position: relative;
+        z-index: 3;
+        text-shadow: none;
+        margin-left: 5px;
+        margin-top: -15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo-container {
+        height: 120px;
         width: 100%;
+        box-shadow: 1px 1px 4px var(--oxford-blue);
         justify-content: center;
     }
 
     #slogan {
-        font-size: .7rem;
+        font-size: 1rem;
         width: 100%;
         text-align: center;
     }
 
     nav {
-        height: 280px;
+        height: 325px;
         transform: translateY(120px);
         box-shadow: 1px 1px 4px;
     }
@@ -188,11 +219,17 @@ footer {
     }
 
     .menu li {
-        margin-top: 30px;
-        margin-left: 20px;
+        margin-top: 25px;
+        margin-left: 10px;
         display: block;
     }
 
-    
+    .hidden-links {
+        display: block !important;
+    }
+
+    .dropdown {
+        display: none;
+    }
     
 }
