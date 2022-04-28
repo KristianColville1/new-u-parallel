@@ -302,31 +302,32 @@ footer {
     }
 
     .tick:checked ~ nav {
-        height: 325px;
+        height: 200px;
         transform: translateY(120px);
         box-shadow: 1px 1px 4px;
-        transition: 0.3s ease-out;
-        display: inline-block;
+        display: block;
+        transition: 0.3s ease;
     }
 
-    .menu {
+    .tick:checked ~ nav .menu {
         display: block;
     }
 
-    .menu li {
+    .tick:checked ~ nav .menu li {
         height: 26px;
         width: 100%;
-        padding-top: 25px;
+        padding-top: 8px;
         padding-right: 100%;
         padding-left: 10px;
         display: block;
-        transition: .5s ease;
+        transition: all .5s ease;
     }
 
     .menu li:hover,
     .hidden-links:hover {
         color: var(--oxford-blue);
         background-color: var(--medium-spring-green);
+        transition: all 0.2s ease;
     }
 
     .menu li:hover a {
@@ -339,6 +340,24 @@ footer {
 
     .dropdown {
         display: none;
+    }
+
+    
+    .tick:checked ~ .ham-menu .b-one {
+        transform: rotate(45deg);
+        position: absolute;
+        top: 12px;
+        transition: all 0.3s;
+    }
+    .tick:checked ~ .ham-menu .b-two {
+        opacity: 0;
+        transition: all 0.3s;
+    }
+    .tick:checked ~ .ham-menu .b-three {
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 12px;
+        transition: all 0.3s;
     }
 }
 
