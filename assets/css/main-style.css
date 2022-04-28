@@ -38,14 +38,15 @@ li {
 header {
     width: 100%;
     height: 80px;
-    box-shadow: 1px 1px 4px var(--oxford-blue);
+    background-color: white;
+    box-shadow: 1px 1px 8px var(--oxford-blue);
     position: fixed;
+    z-index: 10;
 }
 
 .logo-container {
     height: 80px;
     width: 350px;
-    background-color: white;
     position: absolute;
     display: flex;
     flex-wrap: wrap;
@@ -100,7 +101,7 @@ nav {
     cursor: pointer;
 }
 
-.menu a:hover,
+.menu li:hover,
 .hidden-links:hover {
     font-size: 1.3rem;
     font-weight: 700;
@@ -166,6 +167,7 @@ nav {
     width: 42px;
     height: 42px;
     appearance: none;
+    z-index: 30;
 }
 
 .bars {
@@ -181,35 +183,12 @@ nav {
 .main-spacer {
     height: 100px;
 }
+
 main {
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    position: relative;
-}
-
-.page-container main p {
-    height: 10vh;
-    width: 100px;
-}
-.together-image {
-    width: 50%;
-    height: 600px;
-    background: url('../images/together.jpg') no-repeat center center;
-    background-color: var(--sky-blue-crayola);
-    background-blend-mode: soft-light;
-    background-size: cover;
-    border-radius: 8px;
-    position: relative;
-    z-index: -2;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.tester {
-    width: 100%;
-    height: 1200px;
 }
 
 /************************************************************Footer*/
@@ -320,15 +299,14 @@ footer {
 
     nav {
         display: none;
-        height: 325px;
-        transform: translateY(120px);
-        box-shadow: 1px 1px 4px;
     }
 
     .tick:checked ~ nav {
-        transition: 1.5s ease-out;
-        display: block;
-        
+        height: 325px;
+        transform: translateY(120px);
+        box-shadow: 1px 1px 4px;
+        transition: 0.3s ease-out;
+        display: inline-block;
     }
 
     .menu {
@@ -336,18 +314,28 @@ footer {
     }
 
     .menu li {
-        height: 20px;
-        margin-top: 25px;
-        margin-left: 10px;
+        height: 26px;
+        width: 100%;
+        padding-top: 25px;
+        padding-right: 100%;
+        padding-left: 10px;
         display: block;
         transition: .5s ease;
     }
 
-    .hidden-links {
-        display: block !important;
+    .menu li:hover,
+    .hidden-links:hover {
+        color: var(--oxford-blue);
+        background-color: var(--medium-spring-green);
     }
 
-
+    .menu li:hover a {
+        color: var(--oxford-blue);
+    }
+    .hidden-links {
+        padding-right: 100%;
+        display: block !important;
+    }
 
     .dropdown {
         display: none;
