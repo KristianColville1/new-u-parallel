@@ -1,6 +1,19 @@
+:root {
+    --cerulean-blue: #2754ceff;
+    --pacific-blue: #30aabcff;
+    --medium-spring-green: #38ffaaff;
+    --aero-blue: #cdffe9ff;
+    --steel-teal: #698993ff;
+    --y-in-mn-blue: #374e68ff;
+    --oxford-blue: #05123cff;
+    --st-patricks-blue: #163385ff;
+    --white: #fefefeff;
+    --space-cadet: #152449ff;
+}
+
 .hero-container {
     width: 100%;
-    background-color: red;
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;

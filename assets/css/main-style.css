@@ -2,11 +2,16 @@
 
 /*******************************************************Defaults*/
 :root {
+    --cerulean-blue: #2754ceff;
+    --pacific-blue: #30aabcff;
     --medium-spring-green: #38ffaaff;
-    --pine-green: #1d7a6dff;
-    --midnight-green-eagle-green: #124655ff;
-    --oxford-blue: #07113dff;
-    --sky-blue-crayola: #54defdff;
+    --aero-blue: #cdffe9ff;
+    --steel-teal: #698993ff;
+    --y-in-mn-blue: #374e68ff;
+    --oxford-blue: #05123cff;
+    --st-patricks-blue: #163385ff;
+    --white: #fefefeff;
+    --space-cadet: #152449ff;
 }
 
 * {
@@ -21,6 +26,7 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+    background-color: var(--aero-blue);
 }
 
 header, h1, h2, h3, footer { font-family: 'Lato', sans-serif;}
@@ -151,8 +157,8 @@ nav {
 }
 
 .dropdown:hover .dropbtn {
-    color: var(--pine-green);
-    background-color: var(--midnight-green-eagle-green);
+    color: var(--medium-spring-green);
+    background-color: var(--st-patricks-blue);
 }
 
 .tick,
@@ -181,7 +187,7 @@ nav {
 /***********************************************************Body*/
 
 .main-spacer {
-    height: 100px;
+    height: 80px;
 }
 
 main {
