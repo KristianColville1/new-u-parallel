@@ -29,6 +29,7 @@
     background-size: cover;
     background-color: var(--pacific-blue);
     background-blend-mode:overlay;
+    border-bottom: 6px ridge var(--steel-teal);
 }
 
 .testimonials {
@@ -43,13 +44,14 @@
 .testimonial-1 {
     color: var(--white);
     width: 70%;
-    font-size: 3.2rem;
+    font-size: 4rem;
     font-weight: 600;
     font-family: 'Square Peg', cursive;
-    letter-spacing: 2px;
     text-align: center;
     text-shadow: 1px 1px 4px var(--oxford-blue);
+    padding-left: 35px;
 }
+
 
 .testimonial-1 ~ p {
     font-size: 1.2rem;
@@ -60,3 +62,98 @@
     color: var(--white);
 }
 
+.left-btn, .right-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    color: var(--st-patricks-blue);
+    opacity: 10%;
+    background-color: var(--medium-spring-green);
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+}
+
+.left-btn {
+    left: 180px;
+    top: 45%;
+}
+
+.right-btn {
+    right: 180px;
+    top: 45%;
+}
+
+.left-btn:hover, .right-btn:hover {
+    opacity: 1;
+}
+
+.contact {
+    height: 28px;
+    font-size: 1.3rem;
+    text-align: center;
+    color: var(--medium-spring-green);
+    background-color: var(--oxford-blue);
+    cursor: pointer;
+    border-radius: 16px;
+    padding: 15px 10px;
+    position: absolute;
+    right: 50px;
+    bottom: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact:hover {
+    font-size: 150%;
+    font-weight: 700;
+    color: var(--oxford-blue);
+    background-color: var(--medium-spring-green);
+    right: 55px;
+    transition: all 0.4s ease;
+}
+
+/***********************************************************Media Queries*/
+
+@media screen and (max-width: 1430px) {
+    .left-btn {
+        left: 0;
+        margin-left: 45px;
+    }
+    .right-btn {
+        right: 0;
+        margin-right: 45px;
+    }
+    .testimonial-1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .left-btn {
+        margin-left: 20px;
+    }
+    .right-btn {
+        margin-right: 20px;
+    }
+
+    .contact {
+        right: 0;
+        bottom: 0;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 486px) {
+    .testimonial-1 {
+        font-size: 2rem;
+    }
+    .contact {
+        margin-right: 40px;
+        margin-bottom: 60px;
+    }
+}
