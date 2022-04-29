@@ -11,19 +11,52 @@
     --space-cadet: #152449ff;
 }
 
-.hero-container {
+.containers {
     width: 100%;
-    margin-top: 10px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+}
+
+.hero-img {
+    width: 100%;
+    height: 91vh;
+    background: url('../images/teamwork.jpg') no-repeat center center;
+    background-size: cover;
+    background-color: var(--pacific-blue);
+    background-blend-mode:overlay;
+}
+
+.testimonials {
+    width: 100%;
+    height: 100%;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.slides {
-    width: 35%;
-    height: auto;
-    border-radius: 32px;
-    position: relative;
+.testimonial-1 {
+    color: var(--white);
+    width: 70%;
+    font-size: 3.2rem;
+    font-weight: 600;
+    font-family: 'Square Peg', cursive;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 1px 1px 4px var(--oxford-blue);
 }
+
+.testimonial-1 ~ p {
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-top: 5px;
+    margin-left: 60px;
+    text-align: center;
+    color: var(--white);
+}
+

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&family=Square+Peg&display=swap');
 
 /*******************************************************Defaults*/
 :root {
@@ -26,7 +26,6 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    background-color: var(--aero-blue);
 }
 
 header, h1, h2, h3, footer { font-family: 'Lato', sans-serif;}
@@ -35,6 +34,27 @@ li {
     list-style-type: none;
 }
 
+/***********color classes */
+.green {
+    color: var(--medium-spring-green);
+}
+
+.white {
+    color: var(--white);
+}
+
+.ox-blue {
+    color: var(--oxford-blue);
+}
+
+/**************Text Styles */
+
+.bold {
+    font-size: 110%;
+    font-style: oblique;
+    font-weight: 900;
+    transition: .3s ease;
+}
 /*********************************************************Header*/
 
 .page-container {
