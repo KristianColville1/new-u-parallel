@@ -129,6 +129,11 @@
 }
 
 /*********************************************************About section*/
+
+.row {
+    width: 100%;
+    height: 200px;
+}
 #about-section { 
     min-height: 100vh;
     width: 100%;
@@ -168,7 +173,8 @@ h1#about {
 }
 
 .about-container p {
-    width: 600px;
+    width: 700px;
+    padding-bottom: 16px;
 }
 
 .about-container h2 {
@@ -188,8 +194,9 @@ h1#about {
     padding: 16px;
     color: var(--oxford-blue);
     background-color: transparent;
-    text-align: center;
+    text-align:justify;
     box-shadow: 1px 1px 4px var(--oxford-blue);
+    position: relative;
 }
 
 .wrapper-left:hover, .wrapper-right:hover {
@@ -197,6 +204,12 @@ h1#about {
     transition: all .3s ease;
 }
 
+.quote-box {
+    font-weight: 700;
+    font-style: italic;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
 /***********************************************************Media Queries*/
 
 @media screen and (max-width: 1430px) {
@@ -211,6 +224,18 @@ h1#about {
     .testimonial-1 {
         font-size: 3rem;
         width: 75%;
+    }
+}
+
+@media screen and (max-width: 815px) {
+    .about-container p {
+        width: 100%;
+    }
+    .wrapper-left, .wrapper-right {
+        width: 90%;
+        margin: 32px 0;
+        padding: 16px;
+        text-align: center;
     }
 }
 
@@ -245,13 +270,3 @@ h1#about {
     }
 }
 
-@media screen and (max-width: 715px) {
-    .about-container p {
-        width: 100%;
-    }
-    .wrapper-left, .wrapper-right {
-        width: 90%;
-        margin: 32px 0;
-        padding: 16px;
-    }
-}
