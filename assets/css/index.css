@@ -1,3 +1,4 @@
+/************************************************Defaults*/
 :root {
     --cerulean-blue: #2754ceff;
     --pacific-blue: #30aabcff;
@@ -11,6 +12,16 @@
     --space-cadet: #152449ff;
 }
 
+.big-curve { width: 100%;}
+.small-curve { width: 70%;}
+
+.big-curve, .small-curve {
+    margin-top: 5px;
+    border-radius: 150%;
+    border-bottom: 3px solid var(--medium-spring-green);
+}
+
+/*************************************************Hero*/
 .containers {
     width: 100%;
     display: flex;
@@ -27,9 +38,8 @@
     height: 91vh;
     background: url('../images/teamwork.jpg') no-repeat center center;
     background-size: cover;
-    background-color: var(--pacific-blue);
-    background-blend-mode:overlay;
-    border-bottom: 6px ridge var(--steel-teal);
+    background-color: var(--steel-teal);
+    background-blend-mode: hard-light;
 }
 
 .testimonials {
@@ -44,9 +54,9 @@
 .testimonial-1 {
     color: var(--white);
     width: 70%;
-    font-size: 4rem;
-    font-weight: 600;
-    font-family: 'Square Peg', cursive;
+    font-size: 3rem;
+    font-style: italic;
+    letter-spacing: -2px;
     text-align: center;
     text-shadow: 1px 1px 4px var(--oxford-blue);
     padding-left: 35px;
@@ -87,6 +97,9 @@
 
 .left-btn:hover, .right-btn:hover {
     opacity: 1;
+    color: var(--medium-spring-green);
+    background-color: var(--oxford-blue);
+    transition: all 0.5s ease;
 }
 
 .contact {
@@ -112,8 +125,76 @@
     font-weight: 700;
     color: var(--oxford-blue);
     background-color: var(--medium-spring-green);
-    right: 55px;
     transition: all 0.4s ease;
+}
+
+/*********************************************************About section*/
+#about-section { 
+    min-height: 100vh;
+    width: 100%;
+    background: url('../images/french-mountain.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: var(--aero-blue);
+    background-blend-mode: hard-light;
+}
+
+h1#about {
+    width: 100%;
+    background-color: var(--oxford-blue);
+    color: var(--medium-spring-green);
+    padding: 16px 0;
+    border-top: 2px inset var(--medium-spring-green);
+    border-bottom: 2px inset var(--medium-spring-green);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.about-background {
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    z-index: -1;
+
+}
+
+.about-container {
+    height:900px;
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-container p {
+    width: 600px;
+}
+
+.about-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--aero-blue);
+}
+
+.wrapper-left { float: left;}
+.wrapper-right { float: right;}
+
+.wrapper-left, .wrapper-right {
+    height: fit-content;
+    width: fit-content;
+    margin: 32px;
+    font-size: 1rem;
+    padding: 16px;
+    color: var(--oxford-blue);
+    background-color: transparent;
+    text-align: center;
+    box-shadow: 1px 1px 4px var(--oxford-blue);
+}
+
+.wrapper-left:hover, .wrapper-right:hover {
+    background-color: var(--white);
+    transition: all .3s ease;
 }
 
 /***********************************************************Media Queries*/
@@ -129,10 +210,15 @@
     }
     .testimonial-1 {
         font-size: 3rem;
+        width: 75%;
     }
 }
 
 @media screen and (max-width: 768px) {
+    .testimonial-1 {
+        font-size: 2rem;
+        width: 80%;
+    }
     .left-btn {
         margin-left: 20px;
     }
@@ -150,10 +236,22 @@
 
 @media screen and (max-width: 486px) {
     .testimonial-1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        width: 90%;
     }
     .contact {
         margin-right: 40px;
         margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 715px) {
+    .about-container p {
+        width: 100%;
+    }
+    .wrapper-left, .wrapper-right {
+        width: 90%;
+        margin: 32px 0;
+        padding: 16px;
     }
 }
