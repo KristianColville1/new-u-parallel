@@ -263,13 +263,20 @@ footer {
     text-align: center
 }
 
+.footer-links {
+    width: 80px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
 .footer-links li {
     display: inline;
 }
 
 .footer-links a {
-    font-size: 2rem;
-    margin-left: 15px;
+    font-size: 32px;
+    margin-left: 4px;
     color: var(--white);
     text-decoration: none;
 }
@@ -419,5 +426,8 @@ button {
     #slogan {
         text-align: left;
         margin-left: 8px;
+    }
+    .footer-container {
+        width: 95%;
     }
 }
