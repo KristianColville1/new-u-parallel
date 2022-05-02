@@ -37,7 +37,7 @@
     width: 100%;
     height: 91vh;
     background: url('../images/teamwork.jpg') no-repeat center center;
-    background-size: 100% 100%;
+    background-size: cover;
     background-color: var(--steel-teal);
     background-blend-mode: hard-light;
 }
@@ -138,7 +138,7 @@
     min-height: 100vh;
     width: 100%;
     background: url('../images/french-mountain.jpg') no-repeat center center;
-    background-size:  100% 100%;
+    background-size:  cover;
     background-attachment: fixed;
     background-color: var(--aero-blue);
     background-blend-mode: hard-light;
@@ -260,6 +260,15 @@ h1#about {
 }
 
 @media screen and (max-width: 486px) {
+    .hero-img {
+        background: url('../images/mountain.jpg') no-repeat center center;
+        background-size: cover;
+    }
+    #about-section { 
+        background: url('../images/sea-waves.jpg') no-repeat center center;
+        background-color: var(--aero-blue);
+        background-size: cover;
+    }
     .testimonial-1 {
         font-size: 1.5rem;
         width: 90%;
