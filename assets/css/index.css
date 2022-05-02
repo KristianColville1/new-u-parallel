@@ -261,11 +261,11 @@ h1#about {
 
 @media screen and (max-width: 486px) {
     .hero-img {
-        background: url('../images/mountain.jpg') no-repeat center center;
+        background: url('../images/mountain.jpeg') no-repeat center center;
         background-size: cover;
     }
     #about-section { 
-        background: url('../images/sea-waves.jpg') no-repeat center center;
+        background: url('../images/ocean-waves.jpeg') no-repeat center center;
         background-color: var(--aero-blue);
         background-size: cover;
     }
