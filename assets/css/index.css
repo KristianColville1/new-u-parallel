@@ -230,7 +230,7 @@ h1#about {
 .why-us-head {
     width: 100%;
     color: var(--medium-spring-green);
-    margin-top: 32px;
+    background-color: var(--oxford-blue);
     padding: 16px 0;
     font-size: 2.5rem;
     text-align: center;
@@ -239,9 +239,9 @@ h1#about {
 
 .container-row {
     height: fit-content;
-    width: fit-content;
-    max-width: 90%;
-    margin-top: 48px;
+    background-color: var(--oxford-blue);
+    max-width: 70%;
+    padding-bottom: 16px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -251,8 +251,7 @@ h1#about {
 .right-col { float: right;}
 
 .left-col, .right-col {
-    width: 48%;
-    margin: 0 16px;
+    width: 45%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -263,17 +262,14 @@ h1#about {
     height: 350px;
 }
 
-.img, .text {
-    box-shadow: 1px 1px 4px var(--oxford-blue);
+.img {
+    border: 3px inset var(--aero-blue);
 }
-
 .text {
     width: 90%;
     font-size: 16px;
     color: var(--white);
     background-color: var(--oxford-blue);
-    padding: 16px;
-    margin-left: 16px;
     margin-top: 16px;
     text-align: justify;
 }
@@ -334,6 +330,7 @@ h1#about {
         width: 75%;
     }
 }
+
 @media screen and (max-width: 850px) {
     .container-row {
         height: fit-content;
@@ -344,7 +341,8 @@ h1#about {
     .right-col { float: left;}
 
     .left-col, .right-col {
-        width: 95%;
+        width: 98%;
+        margin: 0;
         margin-top: 32px;
     }
     .text {
@@ -352,6 +350,7 @@ h1#about {
     }
 
 }
+
 @media screen and (max-width: 815px) {
     .about-container p {
         width: 100%;
