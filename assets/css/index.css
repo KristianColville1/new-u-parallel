@@ -240,7 +240,7 @@ h1#about {
 .container-row {
     height: fit-content;
     width: fit-content;
-    max-width: 70%;
+    max-width: 90%;
     margin-top: 48px;
     position: relative;
     left: 50%;
@@ -251,13 +251,16 @@ h1#about {
 .right-col { float: right;}
 
 .left-col, .right-col {
-    width: 45%;
+    width: 48%;
     margin: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .img-col {
-    width: 650px;
-    height: 450px;
+    width: 550px;
+    height: 350px;
 }
 
 .img, .text {
@@ -331,7 +334,24 @@ h1#about {
         width: 75%;
     }
 }
+@media screen and (max-width: 850px) {
+    .container-row {
+        height: fit-content;
+        width: fit-content;
+        max-width: 100%;
+        margin-top: 0;
+    }
+    .right-col { float: left;}
 
+    .left-col, .right-col {
+        width: 95%;
+        margin-top: 32px;
+    }
+    .text {
+        width: 100%;
+    }
+
+}
 @media screen and (max-width: 815px) {
     .about-container p {
         width: 100%;
@@ -381,6 +401,15 @@ h1#about {
     .contact {
         margin-right: 40px;
         margin-bottom: 60px;
+    }
+    .img-col {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 642px) {
+    .img-col {
+        width: 90%;
     }
 }
 
