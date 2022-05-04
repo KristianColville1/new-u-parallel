@@ -240,11 +240,14 @@ footer {
     justify-content: space-between;
 }
 
-.logo-footer {
+.mini-logo {
     width: 100px;
     height: 50px;
     background: url('../images/logo-reverse.jpg') no-repeat center center;
     background-size: contain;
+}
+.logo-footer a {
+    cursor: pointer;
 }
 
 .mini-slogan {
@@ -415,6 +418,12 @@ button {
     }
 }
 
+@media screen and (max-width: 768px){
+    .footer-container {
+        width: 95%;
+    }
+}
+
 @media screen and (max-width: 432px) {
     .logo-container {
         justify-content: left;
@@ -423,7 +432,5 @@ button {
         text-align: left;
         margin-left: 8px;
     }
-    .footer-container {
-        width: 95%;
-    }
+
 }
